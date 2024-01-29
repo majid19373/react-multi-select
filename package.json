@@ -1,6 +1,6 @@
 {
     "name": "react-multi-selectes",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Custom Selectbox",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
@@ -32,8 +32,6 @@
         "@types/node": "^20.11.9",
         "@types/react": "^18.2.48",
         "@types/react-dom": "^18.2.18",
-        "rollup": "^4.9.6",
-        "styled-components": "^6.1.8",
         "typescript": "^5.3.3"
     },
     "peerDependencies": {
