@@ -1,0 +1,51 @@
+{
+    "name": "react-multi-select",
+    "version": "1.0.0",
+    "description": "Custom Selectbox",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "npm run clean && npm run watch && npm run build:esm && npm run build:cjs && npm run copy-files",
+        "clean": "rm -rf dist/",
+        "watch": "prettier --write src/",
+        "copy-files": "cp -r assets/ dist/",
+        "build:esm": "tsc",
+        "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+    },
+    "keywords": [
+        "react-multi-select",
+        "react-multi-selectbox",
+        "multi-select",
+        "multi-selectbox",
+        "react",
+        "multi selectbox",
+        "react multi selectbox",
+        "custom selectbox",
+        "custom multi selectbox"
+    ],
+    "author": "Seyed Majid Attar <majidsma19373@gmail.com> (https://majid19373.github.io)",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^20.11.9",
+        "@types/react": "^18.2.48",
+        "@types/react-dom": "^18.2.18",
+        "rollup": "^4.9.6",
+        "styled-components": "^6.1.8",
+        "typescript": "^5.3.3"
+    },
+    "peerDependencies": {
+        "react": ">=16",
+        "react-dom": ">=16"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/majid19373/react-multi-select.git"
+    },
+    "bugs": {
+        "url": "https://github.com/majid19373/react-multi-select/issues"
+    },
+    "homepage": "https://github.com/majid19373/react-multi-select#readme"
+}

@@ -1,0 +1,153 @@
+.__customSelectbox {
+    position: relative;
+    width: 100%;
+    font-size: 0.8rem;
+    --background-color: #ffffff;
+    --background-hover-color: #98c5ff;
+
+    --border-color: #cccccc;
+    --border-hover-color: #bebebe;
+    --border-focus-color: #2684ff;
+    --border-radius: 0.35rem;
+    --border-radius-select: 0.25rem;
+    --border-width: 2px;
+
+    --padding: 0.25rem;
+
+    --height-input: 2.25rem;
+
+    --text-color: #2e2d2d;
+    --text-hover-color: #2e2d2d;
+
+    --placeholder-color: #bebebe;
+}
+.__customSelectbox * {
+    box-sizing: border-box;
+}
+.__customSelectbox .__customInput {
+    border-radius: var(--border-radius);
+    border-style: solid;
+    border-width: var(--border-width);
+    border-color: var(--border-color);
+    background-color: var(--background-color);
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    height: var(--height-input);
+    color: var(--text-color);
+    width: 100%;
+}
+.__customSelectbox .__customInput::placeholder {
+    color: var(--placeholder-color);
+}
+.__customSelectbox .__customInput:focus,
+.__customSelectbox .__customInput:focus-visible {
+    outline-color: var(--border-focus-color);
+    border-color: var(--border-focus-color);
+}
+.__customSelectbox .__customSelectbox_main {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 2.5rem;
+    height: fit-content;
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+.__customSelectbox .__customSelectbox_main:hover {
+    border-color: var(--border-hover-color);
+}
+.__customSelectbox .__customSelectbox_angleMain {
+    display: flex;
+    place-items: center;
+    stroke: var(--text-color);
+}
+
+.__customSelectbox .__customSelectbox_angleMain .__customSelectbox_angle {
+    transition: all 100ms ease-in-out;
+}
+
+.__customSelectbox .__customSelectbox_angleMain .__customSelectbox_angle.__customeSelectbox_rotate0 {
+    transform: rotate(0);
+}
+.__customSelectbox .__customSelectbox_angleMain .__customSelectbox_angle.__customeSelectbox_rotate180 {
+    transform: rotate(180deg);
+}
+
+.__customSelectbox .__customSelectbox_main.__showSelectbox {
+    border-color: var(--border-focus-color);
+}
+
+.__customSelectbox .__customSelectbox_main .__isMulti {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.__customSelectbox .__customSelectbox_main .__isMulti .__selectedItems {
+    stroke: var(--text-color);
+    color: var(--text-hover-color);
+    background-color: var(--background-hover-color);
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    padding: var(--padding);
+    border-radius: var(--border-radius-select);
+    cursor: pointer;
+    display: flex;
+    gap: 1px;
+}
+.__customSelectbox .__customSelectbox_main .__isMulti .__selectedItems > span {
+    display: flex;
+    place-items: center;
+}
+
+.__customSelectbox .__customSelectbox_main .__isMulti .__isPlaceholder {
+    cursor: pointer;
+    color: var(--placeholder-color);
+}
+
+.__customSelectbox .__customeSelectbox_dropContents {
+    padding: var(--padding);
+    z-index: 20;
+    border-style: solid;
+    border-radius: var(--border-radius);
+    border-width: var(--border-width);
+    border-color: var(--border-color);
+    background-color: var(--background-color);
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateY(0.25rem);
+    max-height: 14rem;
+    overflow-y: auto;
+}
+
+.__customSelectbox .__customeSelectbox_dropContents.__bottomOpen {
+    bottom: 3rem;
+}
+
+.__customSelectbox .__customeSelectbox_dropContents .__searchMain {
+    padding: var(--padding);
+}
+
+.__customSelectbox .__customeSelectbox_dropContents .__itemMain {
+    padding: var(--padding);
+}
+
+.__customSelectbox .__customeSelectbox_dropContents .__itemMain .__item {
+    padding: var(--padding);
+    cursor: pointer;
+    border-radius: var(--border-radius-select);
+    display: flex;
+    align-items: center;
+    min-height: var(--height-input);
+}
+.__customSelectbox .__customeSelectbox_dropContents .__itemMain .__item:hover {
+    background-color: var(--background-hover-color);
+}
+
+.__customSelectbox .__customeSelectbox_dropContents .__itemMain .__item.__isSelect {
+    color: var(--text-hover-color);
+    background-color: var(--background-hover-color);
+}
