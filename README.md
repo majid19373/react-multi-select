@@ -1,4 +1,4 @@
-# React-Multi-Select
+# React-Multi-Selectes
 
 ## How to use
 
