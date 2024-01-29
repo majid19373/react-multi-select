@@ -40,10 +40,10 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/majid19373/react-multi-select.git"
+        "url": "git+https://github.com/majid19373/react-multi-selectes.git"
     },
     "bugs": {
-        "url": "https://github.com/majid19373/react-multi-select/issues"
+        "url": "https://github.com/majid19373/react-multi-selectes/issues"
     },
-    "homepage": "https://github.com/majid19373/react-multi-select#readme"
+    "homepage": "https://github.com/majid19373/react-multi-selectes#readme"
 }
