@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { AngleIcon, CloseIcon } from './Icon';
 import '../../assets/styles.css';
 import { OptionsType, Props } from './types';
+import { v4 as uuidv4 } from 'uuid';
 
 export const CustomSelectBox = (props: Props) => {
     const {
@@ -37,10 +38,10 @@ export const CustomSelectBox = (props: Props) => {
     const inputRef = useRef<any>(); // Reference to the custom select input element
     const [isOpenUp, setIsOpenUp] = useState<boolean>(false);
 
-    // console.log(defaultValue, options)
+    const uniqueId = uuidv4();
 
     useEffect(() => {
-        const rootVariable: HTMLInputElement | null = document.querySelector('.__customSelectbox');
+        const rootVariable: HTMLElement | null = document.getElementById(`__customSelectbox-${uniqueId}`)
         if (rootVariable) {
             if (backgroundColor) {
                 rootVariable.style.setProperty('--background-color', backgroundColor);
@@ -215,7 +216,7 @@ export const CustomSelectBox = (props: Props) => {
     };
 
     return (
-        <div className="__customSelectbox">
+        <div id={`__customSelectbox-${uniqueId}`} className="__customSelectbox">
             <div ref={inputRef} onClick={handleInputClick} className={`${showMenu ? '__showSelectbox' : ''} __customSelectbox_main __customInput`}>
                 <div className={`${!selectedValue || (Array.isArray(selectedValue) && selectedValue.length === 0) ? 'placeholder' : ''}`}>{getDisplay()}</div>
                 <div className="__customSelectbox_angleMain">
