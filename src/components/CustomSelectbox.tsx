@@ -41,7 +41,7 @@ export const CustomSelectBox = (props: Props) => {
     const uniqueId = uuidv4();
 
     useEffect(() => {
-        const rootVariable: HTMLElement | null = document.getElementById(`__customSelectbox-${uniqueId}`)
+        const rootVariable: HTMLElement | null = document.getElementById(`__customSelectbox-${uniqueId}`);
         if (rootVariable) {
             if (backgroundColor) {
                 rootVariable.style.setProperty('--background-color', backgroundColor);
