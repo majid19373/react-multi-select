@@ -3,7 +3,7 @@
 ## How to use
 
 ```
-import { CustomSelectBox } from 'custom-selectbox'
+import { CustomSelectBox } from 'react-multi-selectes'
 
 
 <CustomSelectBox
