@@ -56,7 +56,7 @@ export const CustomSelectBox = (props: Props) => {
                 rootVariable.style.setProperty('--border-hover-color', borderHoverColor);
             }
             if (borderFocusColor) {
-                rootVariable.style.setProperty('- --background-hover-color', borderFocusColor);
+                rootVariable.style.setProperty('--border-focus-color', borderFocusColor);
             }
             if (textColor) {
                 rootVariable.style.setProperty('--text-color', textColor);
